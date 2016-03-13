@@ -9,9 +9,34 @@ setTimeout(function(){
 	h1.appendChild(node)
 	document.body.appendChild(h1)
 }, 3000)
+
+var titles = [
+	"SANIC TE HODGEHDG",
+	"ERMAGHAD",
+	"WASFASFSAK TF",
+	"JESSEEEEEEEEEE",
+	"XXXXHACXXXXORRRED",
+	"WAAAATTTTTTTTT",
+	"ERASFSKFFGHGHHHH",
+	"EKLJIDSGCX<MVKDLSG",
+	"KYS",
+	"NON ONONO NONON",
+	"Faceeeee",
+	"fetus",
+	"goood"
+]
+
+document.getElementById('sanic').volume = 0.1
+
 function timeout(){
 	setTimeout(function(){
+		setTimeout(function(){
+			var id = Math.floor(Math.random() * (2 - 1 + 1)) + 1;
+			document.getElementById(id).play();
+		}, Math.random() * (7000 - 3000) + 3000)
 		var id = Math.floor(Math.random() * (24 - 1 + 1)) + 1;
+		var title = titles[Math.floor(Math.random()*titles.length)]
+		document.title = title
 		var randomWidth = Math.random() * (maxWidth / 1.5 - min) + min;
 		var randomHeight = Math.random() * (maxHeight / 1.5 - min) + min;
 		var img = document.createElement('img')
